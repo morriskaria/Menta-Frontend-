@@ -20,9 +20,6 @@ const Login = () => {
     setTimeout(() => {
       alert(`Login successful! Welcome ${formData.userType === 'patient' ? 'Patient' : 'Dr.'}`);
       setIsLoading(false);
-      // Here you would redirect to appropriate dashboard
-      // if (formData.userType === 'patient') navigate('/patient-dashboard');
-      // else navigate('/specialist-dashboard');
     }, 1500);
   };
 
