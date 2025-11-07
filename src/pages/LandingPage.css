@@ -113,6 +113,47 @@
   transform: translateY(-1px);
 }
 
+.hotline-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.hotline-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.btn-emergency {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-emergency:hover {
+  background: #b91c1c;
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+  transform: translateY(-1px);
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #ecfdf5 100%);
@@ -324,6 +365,99 @@
   color: #10b981;
 }
 
+/* Crisis Resources Section */
+.crisis-resources {
+  background: #fef2f2;
+  padding: 96px 0;
+  border-top: 3px solid #dc2626;
+}
+
+.crisis-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.crisis-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #dc2626;
+  margin-bottom: 16px;
+}
+
+.crisis-header p {
+  font-size: 18px;
+  color: #64748b;
+}
+
+.crisis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.crisis-card {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e5e7eb;
+  transition: all 0.2s;
+}
+
+.crisis-card.urgent {
+  border-color: #dc2626;
+  background: linear-gradient(135deg, #fef2f2, #ffffff);
+}
+
+.crisis-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.crisis-card svg {
+  color: #dc2626;
+  margin-bottom: 16px;
+}
+
+.crisis-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.crisis-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #dc2626;
+  margin: 16px 0;
+}
+
+.crisis-card p {
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.btn-crisis {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.btn-crisis:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
 /* Testimonial Section */
 .testimonial {
   background: white;
@@ -423,6 +557,35 @@
   transform: translateY(-2px);
 }
 
+.cta-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-cta-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-cta-secondary:hover {
+  background: white;
+  color: #10b981;
+  transform: translateY(-2px);
+}
+
 /* Footer */
 .footer {
   background: #1e293b;
@@ -502,6 +665,19 @@
   
   .hero-buttons {
     flex-direction: column;
+  }
+  
+  .crisis-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .hotline-btn {
+    font-size: 12px;
+    padding: 6px 12px;
   }
   
   .features-grid {

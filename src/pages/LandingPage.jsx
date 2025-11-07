@@ -1,4 +1,4 @@
-import { Heart, Brain, Users, Star, ArrowRight, CheckCircle, Play } from 'lucide-react';
+import { Heart, Brain, Users, Star, ArrowRight, CheckCircle, Play, Phone, MapPin, Clock, Shield } from 'lucide-react';
 import { useState } from 'react';
 import './LandingPage.css';
 
@@ -20,12 +20,16 @@ const LandingPage = () => {
             
             <nav className="nav">
               <a href="#home">Home</a>
-              <a href="#features">Features</a>
-              <a href="#about">About</a>
+              <a href="#services">Services</a>
+              <a href="#resources">Resources</a>
               <a href="#contact">Contact</a>
             </nav>
             
             <div className="auth-buttons">
+              <button className="hotline-btn" onClick={() => window.open('tel:988', '_self')}>
+                <Phone size={16} />
+                Crisis Hotline: 988
+              </button>
               <button className="btn-secondary">Sign In</button>
               <button className="btn-primary">Get Started</button>
             </div>
@@ -43,24 +47,22 @@ const LandingPage = () => {
             </div>
             
             <h1 className="hero-title">
-              Your Mental Health
-              <span className="gradient-text"> Deserves Care</span>
+              Community Mental Health
+              <span className="gradient-text"> Made Accessible</span>
             </h1>
             
             <p className="hero-description">
-              Connect with licensed professionals, track your wellness journey, and access personalized mental health resources in a safe, supportive environment.
+              Breaking barriers to mental health care in your community. Connect with local therapists, join support groups, and access crisis support - all in one place.
             </p>
             
             <div className="hero-buttons">
               <button className="btn-primary large">
-                Start Your Journey
+                Find Local Services
                 <ArrowRight size={20} />
               </button>
-              <button className="btn-demo">
-                <div className="play-icon">
-                  <Play size={20} />
-                </div>
-                Watch Demo
+              <button className="btn-emergency" onClick={() => window.open('tel:988', '_self')}>
+                <Phone size={20} />
+                Need Help Now? Call 988
               </button>
             </div>
           </div>
@@ -72,20 +74,20 @@ const LandingPage = () => {
         <div className="container">
           <div className="stats-grid">
             <div className="stat">
-              <div className="stat-number">50K+</div>
-              <div className="stat-label">Active Users</div>
+              <div className="stat-number">15K+</div>
+              <div className="stat-label">Community Members</div>
             </div>
             <div className="stat">
-              <div className="stat-number">1M+</div>
-              <div className="stat-label">Sessions Completed</div>
+              <div className="stat-number">200+</div>
+              <div className="stat-label">Local Therapists</div>
             </div>
             <div className="stat">
-              <div className="stat-number">500+</div>
-              <div className="stat-label">Licensed Therapists</div>
+              <div className="stat-number">50+</div>
+              <div className="stat-label">Support Groups</div>
             </div>
             <div className="stat">
-              <div className="stat-number">4.9★</div>
-              <div className="stat-label">User Rating</div>
+              <div className="stat-number">24/7</div>
+              <div className="stat-label">Crisis Support</div>
             </div>
           </div>
         </div>
@@ -95,45 +97,78 @@ const LandingPage = () => {
       <section className="features">
         <div className="container">
           <div className="section-header">
-            <h2>Comprehensive Mental Wellness</h2>
-            <p>Everything you need to support your mental health journey in one integrated platform</p>
+            <h2>Community Mental Health Services</h2>
+            <p>Accessible, affordable, and culturally sensitive mental health care for everyone in our community</p>
           </div>
           
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon brain">
-                <Brain size={32} />
+                <MapPin size={32} />
               </div>
-              <h3>AI-Powered Insights</h3>
-              <p>Get personalized recommendations and insights based on your mental health patterns, mood tracking, and progress analytics.</p>
+              <h3>Local Therapist Network</h3>
+              <p>Find licensed mental health professionals in your area. Filter by specialty, insurance, language, and cultural background.</p>
               <ul>
-                <li><CheckCircle size={20} /> Mood pattern analysis</li>
-                <li><CheckCircle size={20} /> Personalized recommendations</li>
+                <li><CheckCircle size={20} /> Insurance-friendly options</li>
+                <li><CheckCircle size={20} /> Sliding scale fees available</li>
               </ul>
             </div>
             
             <div className="feature-card">
               <div className="feature-icon heart">
-                <Heart size={32} />
+                <Users size={32} />
               </div>
-              <h3>Wellness Tracking</h3>
-              <p>Monitor your emotional well-being with intuitive mood tracking, sleep patterns, and daily wellness metrics.</p>
+              <h3>Support Groups</h3>
+              <p>Join peer support groups for anxiety, depression, grief, addiction recovery, and more. Both in-person and virtual options.</p>
               <ul>
-                <li><CheckCircle size={20} /> Daily mood check-ins</li>
-                <li><CheckCircle size={20} /> Progress visualization</li>
+                <li><CheckCircle size={20} /> Free community groups</li>
+                <li><CheckCircle size={20} /> Facilitated by professionals</li>
               </ul>
             </div>
             
             <div className="feature-card">
               <div className="feature-icon users">
-                <Users size={32} />
+                <Phone size={32} />
               </div>
-              <h3>Professional Support</h3>
-              <p>Connect with licensed therapists and mental health professionals through secure video sessions and messaging.</p>
+              <h3>Crisis Support</h3>
+              <p>Immediate help when you need it most. 24/7 crisis hotline, emergency resources, and safety planning tools.</p>
               <ul>
-                <li><CheckCircle size={20} /> Licensed therapists</li>
-                <li><CheckCircle size={20} /> 24/7 crisis support</li>
+                <li><CheckCircle size={20} /> Call 988 - No signup required</li>
+                <li><CheckCircle size={20} /> Local emergency resources</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Crisis Resources Section */}
+      <section className="crisis-resources">
+        <div className="container">
+          <div className="crisis-header">
+            <h2>Need Immediate Help?</h2>
+            <p>Crisis support is available 24/7 - no account required</p>
+          </div>
+          <div className="crisis-grid">
+            <div className="crisis-card urgent">
+              <Phone size={32} />
+              <h3>Crisis Hotline</h3>
+              <p className="crisis-number">988</p>
+              <p>24/7 Suicide & Crisis Lifeline</p>
+              <button className="btn-crisis" onClick={() => window.open('tel:988', '_self')}>Call Now</button>
+            </div>
+            <div className="crisis-card">
+              <Heart size={32} />
+              <h3>Text Support</h3>
+              <p className="crisis-number">Text HOME to 741741</p>
+              <p>Crisis Text Line</p>
+              <button className="btn-crisis" onClick={() => window.open('sms:741741?body=HOME', '_self')}>Text Now</button>
+            </div>
+            <div className="crisis-card">
+              <Shield size={32} />
+              <h3>Emergency</h3>
+              <p className="crisis-number">911</p>
+              <p>Immediate danger or medical emergency</p>
+              <button className="btn-crisis" onClick={() => window.open('tel:911', '_self')}>Call 911</button>
             </div>
           </div>
         </div>
@@ -149,13 +184,13 @@ const LandingPage = () => {
               ))}
             </div>
             <blockquote>
-              "Menta has completely transformed how I approach my mental health. The personalized insights and professional support have been life-changing."
+              "Finding a therapist who understood my cultural background seemed impossible until I found Menta. The community support has been incredible."
             </blockquote>
             <div className="testimonial-author">
               <div className="author-avatar"></div>
               <div className="author-info">
-                <div className="author-name">Sarah Johnson</div>
-                <div className="author-title">Marketing Manager</div>
+                <div className="author-name">Maria Rodriguez</div>
+                <div className="author-title">Community Member</div>
               </div>
             </div>
           </div>
@@ -165,12 +200,18 @@ const LandingPage = () => {
       {/* CTA Section */}
       <section className="cta">
         <div className="container">
-          <h2>Ready to Transform Your Mental Health?</h2>
-          <p>Join thousands who have already started their wellness journey with Menta</p>
-          <button className="btn-cta">
-            Start Free Trial
-            <ArrowRight size={20} />
-          </button>
+          <h2>Join Your Community's Mental Health Network</h2>
+          <p>Connect with local resources, support groups, and mental health professionals in your area</p>
+          <div className="cta-buttons">
+            <button className="btn-cta">
+              Find Local Services
+              <ArrowRight size={20} />
+            </button>
+            <button className="btn-cta-secondary" onClick={() => window.open('tel:988', '_self')}>
+              <Phone size={20} />
+              Crisis Support: 988
+            </button>
+          </div>
         </div>
       </section>
 
