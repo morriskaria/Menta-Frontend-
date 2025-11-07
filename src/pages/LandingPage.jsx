@@ -1,5 +1,6 @@
-import { Heart, Brain, Users, Star, ArrowRight, CheckCircle, Play, Phone, MapPin, Clock, Shield } from 'lucide-react';
+import { Heart, Brain, Users, Star, ArrowRight, CheckCircle, Play, Phone, MapPin, Clock, Shield, Calendar, MessageCircle, Video, FileText, Award, Globe } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -19,10 +20,10 @@ const LandingPage = () => {
             </div>
             
             <nav className="nav">
-              <a href="#home">Home</a>
-              <a href="#services">Services</a>
-              <a href="#resources">Resources</a>
-              <a href="#contact">Contact</a>
+              <Link to="/">Home</Link>
+              <Link to="/services">Services</Link>
+              <Link to="/resources">Resources</Link>
+              <Link to="/contact">Contact</Link>
             </nav>
             
             <div className="auth-buttons">
@@ -56,10 +57,10 @@ const LandingPage = () => {
             </p>
             
             <div className="hero-buttons">
-              <button className="btn-primary large">
+              <Link to="/services" className="btn-primary large">
                 Find Local Services
                 <ArrowRight size={20} />
-              </button>
+              </Link>
               <button className="btn-emergency" onClick={() => window.open('tel:988', '_self')}>
                 <Phone size={20} />
                 Need Help Now? Call 988
@@ -174,23 +175,175 @@ const LandingPage = () => {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="how-it-works">
+        <div className="container">
+          <div className="section-header">
+            <h2>How Menta Works</h2>
+            <p>Getting mental health support in your community is simple and straightforward</p>
+          </div>
+          <div className="steps-grid">
+            <div className="step">
+              <div className="step-number">1</div>
+              <div className="step-icon">
+                <MapPin size={24} />
+              </div>
+              <h3>Find Local Services</h3>
+              <p>Search for therapists, support groups, and mental health resources in your area using our comprehensive directory.</p>
+            </div>
+            <div className="step">
+              <div className="step-number">2</div>
+              <div className="step-icon">
+                <Calendar size={24} />
+              </div>
+              <h3>Book Appointment</h3>
+              <p>Schedule directly with providers or join support groups. Many offer same-day appointments and flexible scheduling.</p>
+            </div>
+            <div className="step">
+              <div className="step-number">3</div>
+              <div className="step-icon">
+                <Heart size={24} />
+              </div>
+              <h3>Get Support</h3>
+              <p>Receive care through in-person visits, telehealth sessions, or community support groups - whatever works best for you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources Section */}
+      <section className="resources">
+        <div className="container">
+          <div className="section-header">
+            <h2>Mental Health Resources</h2>
+            <p>Free resources and tools to support your mental wellness journey</p>
+          </div>
+          <div className="resources-grid">
+            <div className="resource-card" onClick={() => window.open('#', '_blank')}>
+              <FileText size={32} />
+              <h3>Self-Help Guides</h3>
+              <p>Evidence-based guides for managing anxiety, depression, stress, and more</p>
+              <span className="resource-link">Access Guides →</span>
+            </div>
+            <div className="resource-card" onClick={() => window.open('#', '_blank')}>
+              <Video size={32} />
+              <h3>Wellness Videos</h3>
+              <p>Guided meditations, breathing exercises, and mental health education</p>
+              <span className="resource-link">Watch Videos →</span>
+            </div>
+            <div className="resource-card" onClick={() => window.open('#', '_blank')}>
+              <MessageCircle size={32} />
+              <h3>Community Forum</h3>
+              <p>Connect with others, share experiences, and find peer support</p>
+              <span className="resource-link">Join Forum →</span>
+            </div>
+            <div className="resource-card" onClick={() => window.open('#', '_blank')}>
+              <Award size={32} />
+              <h3>Wellness Challenges</h3>
+              <p>30-day challenges for building healthy mental health habits</p>
+              <span className="resource-link">Start Challenge →</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas Section */}
+      <section className="service-areas">
+        <div className="container">
+          <div className="section-header">
+            <h2>We Serve Your Community</h2>
+            <p>Mental health services available across multiple locations and languages</p>
+          </div>
+          <div className="areas-content">
+            <div className="areas-list">
+              <div className="area-group">
+                <h4>Service Areas</h4>
+                <ul>
+                  <li><MapPin size={16} /> Downtown Community Center</li>
+                  <li><MapPin size={16} /> Northside Health Clinic</li>
+                  <li><MapPin size={16} /> Eastside Family Services</li>
+                  <li><MapPin size={16} /> Westside Wellness Hub</li>
+                  <li><MapPin size={16} /> Mobile Crisis Units</li>
+                </ul>
+              </div>
+              <div className="area-group">
+                <h4>Languages Supported</h4>
+                <ul>
+                  <li><Globe size={16} /> English</li>
+                  <li><Globe size={16} /> Spanish</li>
+                  <li><Globe size={16} /> Mandarin</li>
+                  <li><Globe size={16} /> Arabic</li>
+                  <li><Globe size={16} /> ASL Interpreters</li>
+                </ul>
+              </div>
+              <div className="area-group">
+                <h4>Specialties</h4>
+                <ul>
+                  <li><Heart size={16} /> Trauma & PTSD</li>
+                  <li><Heart size={16} /> Anxiety & Depression</li>
+                  <li><Heart size={16} /> Addiction Recovery</li>
+                  <li><Heart size={16} /> Family Therapy</li>
+                  <li><Heart size={16} /> Youth Services</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonial Section */}
       <section className="testimonial">
         <div className="container">
-          <div className="testimonial-card">
-            <div className="stars">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={24} fill="currentColor" />
-              ))}
+          <div className="testimonials-grid">
+            <div className="testimonial-card">
+              <div className="stars">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={20} fill="currentColor" />
+                ))}
+              </div>
+              <blockquote>
+                "Finding a therapist who understood my cultural background seemed impossible until I found Menta. The community support has been incredible."
+              </blockquote>
+              <div className="testimonial-author">
+                <div className="author-avatar"></div>
+                <div className="author-info">
+                  <div className="author-name">Maria Rodriguez</div>
+                  <div className="author-title">Community Member</div>
+                </div>
+              </div>
             </div>
-            <blockquote>
-              "Finding a therapist who understood my cultural background seemed impossible until I found Menta. The community support has been incredible."
-            </blockquote>
-            <div className="testimonial-author">
-              <div className="author-avatar"></div>
-              <div className="author-info">
-                <div className="author-name">Maria Rodriguez</div>
-                <div className="author-title">Community Member</div>
+            <div className="testimonial-card">
+              <div className="stars">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={20} fill="currentColor" />
+                ))}
+              </div>
+              <blockquote>
+                "The crisis support saved my life. Having 24/7 access without barriers made all the difference during my darkest moment."
+              </blockquote>
+              <div className="testimonial-author">
+                <div className="author-avatar"></div>
+                <div className="author-info">
+                  <div className="author-name">James Chen</div>
+                  <div className="author-title">Crisis Survivor</div>
+                </div>
+              </div>
+            </div>
+            <div className="testimonial-card">
+              <div className="stars">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={20} fill="currentColor" />
+                ))}
+              </div>
+              <blockquote>
+                "The support group helped me realize I wasn't alone. Meeting others with similar struggles in a safe space was transformative."
+              </blockquote>
+              <div className="testimonial-author">
+                <div className="author-avatar"></div>
+                <div className="author-info">
+                  <div className="author-name">Sarah Johnson</div>
+                  <div className="author-title">Support Group Member</div>
+                </div>
               </div>
             </div>
           </div>
@@ -203,10 +356,10 @@ const LandingPage = () => {
           <h2>Join Your Community's Mental Health Network</h2>
           <p>Connect with local resources, support groups, and mental health professionals in your area</p>
           <div className="cta-buttons">
-            <button className="btn-cta">
+            <Link to="/services" className="btn-cta">
               Find Local Services
               <ArrowRight size={20} />
-            </button>
+            </Link>
             <button className="btn-cta-secondary" onClick={() => window.open('tel:988', '_self')}>
               <Phone size={20} />
               Crisis Support: 988
@@ -231,17 +384,25 @@ const LandingPage = () => {
             
             <div className="footer-links">
               <div className="link-group">
-                <h4>Product</h4>
-                <a href="#">Features</a>
-                <a href="#">Pricing</a>
-                <a href="#">Security</a>
-                <a href="#">API</a>
+                <h4>Services</h4>
+                <Link to="/services">Find Therapists</Link>
+                <Link to="/services">Support Groups</Link>
+                <Link to="/resources">Resources</Link>
+                <a href="tel:988">Crisis Hotline</a>
+              </div>
+              
+              <div className="link-group">
+                <h4>Resources</h4>
+                <Link to="/resources">Self-Help Guides</Link>
+                <Link to="/resources">Wellness Videos</Link>
+                <Link to="/resources">Community Forum</Link>
+                <Link to="/resources">Mental Health Blog</Link>
               </div>
               
               <div className="link-group">
                 <h4>Support</h4>
+                <Link to="/contact">Contact Us</Link>
                 <a href="#">Help Center</a>
-                <a href="#">Contact Us</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
               </div>
