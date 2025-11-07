@@ -234,6 +234,12 @@ const PatientRegister = () => {
                   By registering, you agree to our privacy policy and terms of service. 
                   Your information is secure and HIPAA compliant.
                 </p>
+                <div className="login-redirect">
+                  <p>
+                    Already have an account? 
+                    <Link to="/login" className="login-link"> Sign in here</Link>
+                  </p>
+                </div>
               </div>
             </form>
           </div>
