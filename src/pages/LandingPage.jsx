@@ -31,8 +31,8 @@ const LandingPage = () => {
                 <Phone size={16} />
                 Crisis Hotline: 988
               </button>
-              <button className="btn-secondary">Sign In</button>
-              <button className="btn-primary">Get Started</button>
+              <button className="btn-secondary">Patient Login</button>
+              <Link to="/register" className="btn-primary">Register as Patient</Link>
             </div>
           </div>
         </div>
