@@ -52,7 +52,7 @@ const Contact = () => {
                   <div className="method-info">
                     <h3>Crisis Hotline</h3>
                     <p>24/7 immediate support</p>
-                    <a href="tel:988" className="contact-link crisis">988</a>
+                    <a href="tel:1192" className="contact-link crisis">1192</a>
                   </div>
                 </div>
 
@@ -63,7 +63,7 @@ const Contact = () => {
                   <div className="method-info">
                     <h3>General Support</h3>
                     <p>Monday - Friday, 8AM - 6PM</p>
-                    <a href="tel:+15551234567" className="contact-link">(555) 123-4567</a>
+                    <a href="tel:+254700123456" className="contact-link">+254 700 123 456</a>
                   </div>
                 </div>
 
@@ -84,7 +84,7 @@ const Contact = () => {
                   </div>
                   <div className="method-info">
                     <h3>Main Office</h3>
-                    <p>123 Wellness Street<br />Community Center, Suite 200<br />Your City, ST 12345</p>
+                    <p>Menta House, Kenyatta Avenue<br />Nairobi CBD, 2nd Floor<br />Nairobi, Kenya 00100</p>
                   </div>
                 </div>
               </div>

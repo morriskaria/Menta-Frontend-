@@ -27,11 +27,11 @@ const LandingPage = () => {
             </nav>
             
             <div className="auth-buttons">
-              <button className="hotline-btn" onClick={() => window.open('tel:988', '_self')}>
+              <button className="hotline-btn" onClick={() => window.open('tel:1192', '_self')}>
                 <Phone size={16} />
-                Crisis Hotline: 988
+                Crisis Hotline: 1192
               </button>
-              <button className="btn-secondary">Patient Login</button>
+              <Link to="/login" className="btn-secondary">Login</Link>
               <Link to="/register" className="btn-primary">Register as Patient</Link>
             </div>
           </div>
@@ -44,7 +44,7 @@ const LandingPage = () => {
           <div className="hero-content">
             <div className="trust-badge">
               <Star size={16} />
-              Trusted by 50,000+ users worldwide
+              Trusted by 15,000+ Kenyans nationwide
             </div>
             
             <h1 className="hero-title">
@@ -53,7 +53,7 @@ const LandingPage = () => {
             </h1>
             
             <p className="hero-description">
-              Breaking barriers to mental health care in your community. Connect with local therapists, join support groups, and access crisis support - all in one place.
+              Breaking barriers to mental health care across Kenya. Connect with local therapists, join support groups, and access crisis support - all in one place.
             </p>
             
             <div className="hero-buttons">
@@ -63,7 +63,7 @@ const LandingPage = () => {
               </Link>
               <button className="btn-emergency" onClick={() => window.open('tel:988', '_self')}>
                 <Phone size={20} />
-                Need Help Now? Call 988
+                Need Help Now? Call 1192
               </button>
             </div>
           </div>
@@ -76,15 +76,15 @@ const LandingPage = () => {
           <div className="stats-grid">
             <div className="stat">
               <div className="stat-number">15K+</div>
-              <div className="stat-label">Community Members</div>
+              <div className="stat-label">Kenyans Served</div>
             </div>
             <div className="stat">
               <div className="stat-number">200+</div>
-              <div className="stat-label">Local Therapists</div>
+              <div className="stat-label">Licensed Counselors</div>
             </div>
             <div className="stat">
               <div className="stat-number">50+</div>
-              <div className="stat-label">Support Groups</div>
+              <div className="stat-label">Community Groups</div>
             </div>
             <div className="stat">
               <div className="stat-number">24/7</div>
@@ -99,7 +99,7 @@ const LandingPage = () => {
         <div className="container">
           <div className="section-header">
             <h2>Community Mental Health Services</h2>
-            <p>Accessible, affordable, and culturally sensitive mental health care for everyone in our community</p>
+            <p>Accessible, affordable, and culturally sensitive mental health care for all Kenyans</p>
           </div>
           
           <div className="features-grid">
@@ -108,9 +108,9 @@ const LandingPage = () => {
                 <MapPin size={32} />
               </div>
               <h3>Local Therapist Network</h3>
-              <p>Find licensed mental health professionals in your area. Filter by specialty, insurance, language, and cultural background.</p>
+              <p>Find licensed mental health professionals across Kenya. Filter by specialty, NHIF coverage, language, and cultural background.</p>
               <ul>
-                <li><CheckCircle size={20} /> Insurance-friendly options</li>
+                <li><CheckCircle size={20} /> NHIF-friendly options</li>
                 <li><CheckCircle size={20} /> Sliding scale fees available</li>
               </ul>
             </div>
@@ -134,7 +134,7 @@ const LandingPage = () => {
               <h3>Crisis Support</h3>
               <p>Immediate help when you need it most. 24/7 crisis hotline, emergency resources, and safety planning tools.</p>
               <ul>
-                <li><CheckCircle size={20} /> Call 988 - No signup required</li>
+                <li><CheckCircle size={20} /> Call 1192 - No signup required</li>
                 <li><CheckCircle size={20} /> Local emergency resources</li>
               </ul>
             </div>
@@ -153,23 +153,23 @@ const LandingPage = () => {
             <div className="crisis-card urgent">
               <Phone size={32} />
               <h3>Crisis Hotline</h3>
-              <p className="crisis-number">988</p>
-              <p>24/7 Suicide & Crisis Lifeline</p>
-              <button className="btn-crisis" onClick={() => window.open('tel:988', '_self')}>Call Now</button>
+              <p className="crisis-number">1192</p>
+              <p>24/7 Mental Health Crisis Line</p>
+              <button className="btn-crisis" onClick={() => window.open('tel:1192', '_self')}>Call Now</button>
             </div>
             <div className="crisis-card">
               <Heart size={32} />
               <h3>Text Support</h3>
-              <p className="crisis-number">Text HOME to 741741</p>
-              <p>Crisis Text Line</p>
-              <button className="btn-crisis" onClick={() => window.open('sms:741741?body=HOME', '_self')}>Text Now</button>
+              <p className="crisis-number">Text MSADA to 22122</p>
+              <p>Crisis Text Line Kenya</p>
+              <button className="btn-crisis" onClick={() => window.open('sms:22122?body=MSADA', '_self')}>Text Now</button>
             </div>
             <div className="crisis-card">
               <Shield size={32} />
               <h3>Emergency</h3>
-              <p className="crisis-number">911</p>
+              <p className="crisis-number">999</p>
               <p>Immediate danger or medical emergency</p>
-              <button className="btn-crisis" onClick={() => window.open('tel:911', '_self')}>Call 911</button>
+              <button className="btn-crisis" onClick={() => window.open('tel:999', '_self')}>Call 999</button>
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@ const LandingPage = () => {
                 <MapPin size={24} />
               </div>
               <h3>Find Local Services</h3>
-              <p>Search for therapists, support groups, and mental health resources in your area using our comprehensive directory.</p>
+              <p>Search for therapists, support groups, and mental health resources across Kenya using our comprehensive directory.</p>
             </div>
             <div className="step">
               <div className="step-number">2</div>
@@ -252,17 +252,17 @@ const LandingPage = () => {
         <div className="container">
           <div className="section-header">
             <h2>We Serve Your Community</h2>
-            <p>Mental health services available across multiple locations and languages</p>
+            <p>Mental health services available across Kenya in multiple languages</p>
           </div>
           <div className="areas-content">
             <div className="areas-list">
               <div className="area-group">
                 <h4>Service Areas</h4>
                 <ul>
-                  <li><MapPin size={16} /> Downtown Community Center</li>
-                  <li><MapPin size={16} /> Northside Health Clinic</li>
-                  <li><MapPin size={16} /> Eastside Family Services</li>
-                  <li><MapPin size={16} /> Westside Wellness Hub</li>
+                  <li><MapPin size={16} /> Nairobi Central</li>
+                  <li><MapPin size={16} /> Mombasa Coast</li>
+                  <li><MapPin size={16} /> Kisumu Lakeside</li>
+                  <li><MapPin size={16} /> Nakuru Rift Valley</li>
                   <li><MapPin size={16} /> Mobile Crisis Units</li>
                 </ul>
               </div>
@@ -270,10 +270,10 @@ const LandingPage = () => {
                 <h4>Languages Supported</h4>
                 <ul>
                   <li><Globe size={16} /> English</li>
-                  <li><Globe size={16} /> Spanish</li>
-                  <li><Globe size={16} /> Mandarin</li>
-                  <li><Globe size={16} /> Arabic</li>
-                  <li><Globe size={16} /> ASL Interpreters</li>
+                  <li><Globe size={16} /> Kiswahili</li>
+                  <li><Globe size={16} /> Kikuyu</li>
+                  <li><Globe size={16} /> Luo</li>
+                  <li><Globe size={16} /> Sign Language</li>
                 </ul>
               </div>
               <div className="area-group">
@@ -307,8 +307,8 @@ const LandingPage = () => {
               <div className="testimonial-author">
                 <div className="author-avatar"></div>
                 <div className="author-info">
-                  <div className="author-name">Maria Rodriguez</div>
-                  <div className="author-title">Community Member</div>
+                  <div className="author-name">Grace Wanjiku</div>
+                  <div className="author-title">Nairobi Resident</div>
                 </div>
               </div>
             </div>
@@ -324,7 +324,7 @@ const LandingPage = () => {
               <div className="testimonial-author">
                 <div className="author-avatar"></div>
                 <div className="author-info">
-                  <div className="author-name">James Chen</div>
+                  <div className="author-name">David Kiprotich</div>
                   <div className="author-title">Crisis Survivor</div>
                 </div>
               </div>
@@ -341,7 +341,7 @@ const LandingPage = () => {
               <div className="testimonial-author">
                 <div className="author-avatar"></div>
                 <div className="author-info">
-                  <div className="author-name">Sarah Johnson</div>
+                  <div className="author-name">Amina Hassan</div>
                   <div className="author-title">Support Group Member</div>
                 </div>
               </div>
@@ -353,8 +353,8 @@ const LandingPage = () => {
       {/* CTA Section */}
       <section className="cta">
         <div className="container">
-          <h2>Join Your Community's Mental Health Network</h2>
-          <p>Connect with local resources, support groups, and mental health professionals in your area</p>
+          <h2>Join Kenya's Mental Health Network</h2>
+          <p>Connect with local resources, support groups, and mental health professionals across Kenya</p>
           <div className="cta-buttons">
             <Link to="/services" className="btn-cta">
               Find Local Services
@@ -362,7 +362,7 @@ const LandingPage = () => {
             </Link>
             <button className="btn-cta-secondary" onClick={() => window.open('tel:988', '_self')}>
               <Phone size={20} />
-              Crisis Support: 988
+              Crisis Support: 1192
             </button>
           </div>
         </div>
@@ -388,7 +388,7 @@ const LandingPage = () => {
                 <Link to="/services">Find Therapists</Link>
                 <Link to="/services">Support Groups</Link>
                 <Link to="/resources">Resources</Link>
-                <a href="tel:988">Crisis Hotline</a>
+                <a href="tel:1192">Crisis Hotline</a>
               </div>
               
               <div className="link-group">

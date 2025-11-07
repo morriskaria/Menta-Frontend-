@@ -152,6 +152,28 @@
   margin: 0 auto;
 }
 
+.login-redirect {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.login-redirect p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.login-link {
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.login-link:hover {
+  color: #0d9488;
+}
+
 @media (max-width: 768px) {
   .register-form {
     padding: 24px;
