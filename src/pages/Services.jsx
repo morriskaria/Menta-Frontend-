@@ -4,15 +4,15 @@ import './Services.css';
 
 const Services = () => {
   const therapists = [
-    { name: "Dr. Sarah Martinez", specialty: "Anxiety & Depression", location: "Downtown Center", rating: 4.9, available: "Today" },
-    { name: "Dr. James Wilson", specialty: "Trauma & PTSD", location: "Northside Clinic", rating: 4.8, available: "Tomorrow" },
-    { name: "Dr. Lisa Chen", specialty: "Family Therapy", location: "Eastside Services", rating: 4.9, available: "This Week" },
+    { name: "Dr. Grace Wanjiku", specialty: "Anxiety & Depression", location: "Nairobi CBD", rating: 4.9, available: "Today" },
+    { name: "Dr. James Kiprotich", specialty: "Trauma & PTSD", location: "Westlands Clinic", rating: 4.8, available: "Tomorrow" },
+    { name: "Dr. Amina Hassan", specialty: "Family Therapy", location: "Karen Medical Centre", rating: 4.9, available: "This Week" },
   ];
 
   const supportGroups = [
-    { name: "Anxiety Support Circle", type: "In-Person", time: "Tuesdays 6PM", location: "Community Center" },
+    { name: "Anxiety Support Circle", type: "In-Person", time: "Tuesdays 6PM", location: "Nairobi Community Centre" },
     { name: "Depression Recovery Group", type: "Virtual", time: "Thursdays 7PM", location: "Online" },
-    { name: "Grief & Loss Support", type: "Hybrid", time: "Saturdays 2PM", location: "Wellness Hub" },
+    { name: "Grief & Loss Support", type: "Hybrid", time: "Saturdays 2PM", location: "Kilimani Wellness Hub" },
   ];
 
   return (
@@ -76,15 +76,15 @@ const Services = () => {
             <div className="crisis-cards">
               <div className="crisis-card">
                 <h3>24/7 Crisis Hotline</h3>
-                <p className="crisis-number">988</p>
-                <button className="btn-crisis" onClick={() => window.open('tel:988', '_self')}>
+                <p className="crisis-number">1192</p>
+                <button className="btn-crisis" onClick={() => window.open('tel:1192', '_self')}>
                   Call Now
                 </button>
               </div>
               <div className="crisis-card">
                 <h3>Crisis Text Line</h3>
-                <p className="crisis-number">Text HOME to 741741</p>
-                <button className="btn-crisis" onClick={() => window.open('sms:741741?body=HOME', '_self')}>
+                <p className="crisis-number">Text MSADA to 22122</p>
+                <button className="btn-crisis" onClick={() => window.open('sms:22122?body=MSADA', '_self')}>
                   Text Now
                 </button>
               </div>

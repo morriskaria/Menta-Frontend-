@@ -12,19 +12,29 @@ const PatientRegister = () => {
     dateOfBirth: '',
     address: '',
     city: '',
-    zipCode: '',
+    county: '',
     emergencyContact: '',
     emergencyPhone: '',
     insurance: '',
     concerns: ''
   });
 
+  const kenyanCounties = [
+    'Baringo', 'Bomet', 'Bungoma', 'Busia', 'Elgeyo-Marakwet', 'Embu', 'Garissa',
+    'Homa Bay', 'Isiolo', 'Kajiado', 'Kakamega', 'Kericho', 'Kiambu', 'Kilifi',
+    'Kirinyaga', 'Kisii', 'Kisumu', 'Kitui', 'Kwale', 'Laikipia', 'Lamu', 'Machakos',
+    'Makueni', 'Mandera', 'Marsabit', 'Meru', 'Migori', 'Mombasa', 'Murang\'a',
+    'Nairobi', 'Nakuru', 'Nandi', 'Narok', 'Nyamira', 'Nyandarua', 'Nyeri',
+    'Samburu', 'Siaya', 'Taita-Taveta', 'Tana River', 'Tharaka-Nithi', 'Trans Nzoia',
+    'Turkana', 'Uasin Gishu', 'Vihiga', 'Wajir', 'West Pokot'
+  ];
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Registration successful! Welcome to Menta. You can now access mental health services.');
     setFormData({
       firstName: '', lastName: '', email: '', phone: '', dateOfBirth: '',
-      address: '', city: '', zipCode: '', emergencyContact: '', emergencyPhone: '',
+      address: '', city: '', county: '', emergencyContact: '', emergencyPhone: '',
       insurance: '', concerns: ''
     });
   };
@@ -101,7 +111,7 @@ const PatientRegister = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="(555) 123-4567"
+                      placeholder="+254 700 123 456"
                       required
                     />
                   </div>
@@ -137,7 +147,7 @@ const PatientRegister = () => {
 
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="city">City *</label>
+                    <label htmlFor="city">City/Town *</label>
                     <input
                       type="text"
                       id="city"
@@ -148,15 +158,19 @@ const PatientRegister = () => {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="zipCode">ZIP Code *</label>
-                    <input
-                      type="text"
-                      id="zipCode"
-                      name="zipCode"
-                      value={formData.zipCode}
+                    <label htmlFor="county">County *</label>
+                    <select
+                      id="county"
+                      name="county"
+                      value={formData.county}
                       onChange={handleChange}
                       required
-                    />
+                    >
+                      <option value="">Select County</option>
+                      {kenyanCounties.map((county) => (
+                        <option key={county} value={county}>{county}</option>
+                      ))}
+                    </select>
                   </div>
                 </div>
               </div>
@@ -184,7 +198,7 @@ const PatientRegister = () => {
                       name="emergencyPhone"
                       value={formData.emergencyPhone}
                       onChange={handleChange}
-                      placeholder="(555) 123-4567"
+                      placeholder="+254 700 123 456"
                       required
                     />
                   </div>
@@ -203,12 +217,12 @@ const PatientRegister = () => {
                     onChange={handleChange}
                   >
                     <option value="">Select Insurance Provider</option>
-                    <option value="aetna">Aetna</option>
-                    <option value="bluecross">Blue Cross Blue Shield</option>
-                    <option value="cigna">Cigna</option>
-                    <option value="humana">Humana</option>
-                    <option value="medicare">Medicare</option>
-                    <option value="medicaid">Medicaid</option>
+                    <option value="nhif">NHIF (National Hospital Insurance Fund)</option>
+                    <option value="aar">AAR Insurance</option>
+                    <option value="britam">Britam Health</option>
+                    <option value="jubilee">Jubilee Insurance</option>
+                    <option value="madison">Madison Insurance</option>
+                    <option value="uap">UAP Insurance</option>
                     <option value="uninsured">Uninsured/Self-Pay</option>
                   </select>
                 </div>
@@ -232,8 +246,14 @@ const PatientRegister = () => {
                 </button>
                 <p className="privacy-note">
                   By registering, you agree to our privacy policy and terms of service. 
-                  Your information is secure and HIPAA compliant.
+                  Your information is secure and compliant with Kenya's Data Protection Act.
                 </p>
+                <div className="login-redirect">
+                  <p>
+                    Already have an account? 
+                    <Link to="/login" className="login-link"> Sign in here</Link>
+                  </p>
+                </div>
               </div>
             </form>
           </div>
